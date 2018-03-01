@@ -1,0 +1,9 @@
+<script type="text/javascript">
+    var url = '<?= $this->getBlockData()['checkout_url']?>';
+    window.onload = function () {
+        window.open(url, '_blank');
+    };
+</script>
+<h2><?= Mage::helper('uol_boacompra')->__('Completing your checkout with Boa Compra') ?></h2>
+<p><?= Mage::helper('uol_boacompra')->__('You should be redirected to Boa Compra checkout page to finish the payment of your order') . ' #' . $this->getBlockData()['increment_id'] . '. '?></p>
+<p><?= Mage::helper('uol_boacompra')->__('If you are not redirected, ') ?><a href="<?= $this->getBlockData()['checkout_url']?>" target="_blank"><?= Mage::helper('uol_boacompra')->__('click here')?></a></p>

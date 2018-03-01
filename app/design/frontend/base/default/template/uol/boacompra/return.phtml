@@ -1,0 +1,6 @@
+<h2><?= Mage::helper('uol_boacompra')->__('Completed your checkout with Boa Compra') ?></h2>
+<?php if ($this->getBlockData()['view_order_url'] !== '') : ?>
+    <a href="<?= $this->getBlockData()['view_order_url']?>" target="_self"><?= Mage::helper('uol_boacompra')->__('Click here to see more information of your order #') . $this->getBlockData()['increment_id'] . '.'?></a>
+<?php else : ?>
+    <p><?= Mage::helper('uol_boacompra')->__('Check the the e-mail registered in the checkout to follow your order.') ?></p>
+<?php endif; ?>

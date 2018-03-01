@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Uol_BoaCompra</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="https://opensource.org/licenses/Apache-2.0">Apache License, Version 2.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>M&#xF3;dulo de integra&#xE7;&#xE3;o com o Boa Compra</summary>
+    <description>Fundada em 2004, o BoaCompra permite que seus parceiros tenham f&#xE1;cil acesso aos mercados emergentes, atrav&#xE9;s de m&#xE9;todos de pagamentos locais! Engloba mais de 200 m&#xE9;todos de pagamentos diferentes em todos os principais pa&#xED;ses da Am&#xE9;rica Latina e do sul da Europa. Todos os pagamentos efetuados no exterior s&#xE3;o enviados sem sobretaxas.</description>
+    <notes>- Primeira vers&#xE3;o do m&#xF3;dulo Boa Compra para Magento</notes>
+    <authors><author><name>boacompra</name><user>boacompra</user><email>desenvolvedores@boacompra.com.br</email></author></authors>
+    <date>2017-10-29</date>
+    <time>15:12:57</time>
+    <contents><target name="magecommunity"><dir name="Uol"><dir name="BoaCompra"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Field"><file name="Returnurl.php" hash="0feea9092ba4a09049af1a3df6637b15"/></dir></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="bd1e8059ea0652865c2129339c171f14"/><file name="Returnurl.php" hash="ceee557462092256ea2b8223bd9d771b"/></dir><dir name="Model"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Source"><file name="Notifyurl.php" hash="6801e908b53c28b052dd5be6ef7e9b03"/><file name="Returnurl.php" hash="8ec6c8014dbdea16a1f123c971cf4389"/></dir></dir></dir></dir><file name="Default.php" hash="e6a322da6a961774fa148b1720dfaccf"/><file name="Returnurl.php" hash="5c873f07aff2243034282cd16f263425"/></dir><dir name="controllers"><file name="DefaultController.php" hash="08c2cf4421e33d8f3e8f3be0d5a5e880"/></dir><dir name="etc"><file name="config.xml" hash="4e770b4cb678323723ce0a682ce35c8f"/><file name="system.xml" hash="c3076293c5cea554c05d0d8283ea2716"/></dir><dir name="sql"><dir name="uol_boacompra_setup"><file name="install-1.0.0.php" hash="5469d324b7fa147548208714b35e6a10"/></dir></dir></dir></dir></target><target name="magelocale"><dir name="pt_BR"><file name="Uol_BoaCompra.csv" hash="2fa1b2fb0d926843db0574fda0a7d4c9"/></dir><dir name="en_US"><file name="Uol_BoaCompra.csv" hash="d34ef42644251b5694b06e13c291fe24"/></dir></target><target name="mageetc"><dir name="modules"><file name="Uol_BoaCompra.xml" hash="22e3637e7982bbea518b475479376541"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.4.27</min><max>10.0.0</max></php><package><name/><channel>connect.magentocommerce.com/core</channel><min/><max/></package><extension><name>Core</name><min/><max/></extension><extension><name>SPL</name><min/><max/></extension><extension><name>curl</name><min/><max/></extension></required></dependencies>
+</package>

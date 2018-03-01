@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--
+Copyright 2017 BoaCompra S/A.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<config>
+    <modules>
+        <Uol_BoaCompra>
+            <version>1.0.0</version>
+        </Uol_BoaCompra>
+    </modules>
+    
+    <global>
+        <models>
+            <uol_boacompra>
+                <class>Uol_BoaCompra_Model</class>
+            </uol_boacompra>
+        </models>
+        <helpers>
+            <uol_boacompra>
+                <class>Uol_BoaCompra_Helper</class>
+            </uol_boacompra>
+        </helpers>
+        <blocks>
+            <uol_boacompra>
+                <class>Uol_BoaCompra_Block</class>
+            </uol_boacompra>
+        </blocks>
+ 
+        <resources>
+            <uol_boacompra_setup>
+                <setup>
+                    <module>Uol_BoaCompra</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </uol_boacompra_setup>
+        </resources>
+<!--        <payment>
+            <groups>
+                <boacompra>BoaCompra</boacompra>
+            </groups>
+        </payment>-->
+    </global>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <mage_adminhtml>
+                    <files>
+                        <uol_boacompra>Uol_BoaCompra.csv</uol_boacompra>
+                    </files>
+                </mage_adminhtml>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <payment>
+            <boacompra_default>
+                <active>0</active>
+                <model>Uol_BoaCompra_Model_Default</model>
+                <order_status>boacompra_pending</order_status>
+                <title>Boa Compra</title>
+                <!--<payment_action>sale</payment_action>-->
+                <group>boacompra</group>
+            </boacompra_default>
+            <!--
+                @TODO: missing implementation in the boacompra-php library
+                <boacompra_settings>
+                    <log_file>/var/boacompra.log</log_file>
+                </boacompra_settings>
+            -->
+        </payment>
+    </default>
+
+    <frontend>
+        <translate>
+            <modules>
+                <uol_boacompra>
+                    <files>
+                        <uol_boacompra>Uol_BoaCompra.csv</uol_boacompra>
+                    </files>
+                </uol_boacompra>
+            </modules>
+        </translate>
+        <routers>
+            <boacompra>
+                <use>standard</use>
+                <args>
+                    <module>Uol_BoaCompra</module>
+                    <frontName>boacompra</frontName>
+                </args>
+            </boacompra>
+<!--            <layout>
+                <updates>
+                    <boacompra>
+                        <file>uol/boacompra.xml</file>
+                    </boacompra>
+                </updates>
+            </layout>-->
+        </routers>
+    </frontend>
+</config>
