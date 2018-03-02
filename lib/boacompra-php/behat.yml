@@ -1,0 +1,11 @@
+# behat.yml
+default:
+  autoload:
+    - %paths.base%/tests/acceptance/features/context
+  suites:
+    payment:
+      paths: [ %paths.base%/tests/acceptance/features/payment.feature ]
+      contexts: [ Uol\BoaCompra\Acceptance\PaymentContext ]
+    transaction:
+      paths: [ %paths.base%/tests/acceptance/features/transaction_notification.feature ]
+      contexts: [ Uol\BoaCompra\Acceptance\TransactionNotificationContext ]

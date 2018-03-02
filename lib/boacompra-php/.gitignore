@@ -1,0 +1,19 @@
+build
+.DS_Store
+phpunit.local.xml
+*.log
+data/temp/*
+
+# IDE
+.idea
+.project
+.settings
+.buildpath
+atlassian-ide-plugin.xml
+*.bak
+
+# Composer
+vendor
+composer.lock
+composer.phar
+/data/temp/availablePayments.csv
